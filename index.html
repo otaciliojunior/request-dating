@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>PEDIDO DE NAMORO</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <p>Gostaria de saber se você quer namorar comigoo?</p>
+    <div>
+        <button id="sim">Sim</button>
+        <button id="nao" disabled>Não</button>
+        <div id="mensagem">AAAAAAAAAAAAH, EU AMOOOO TU, OBRIGADO POR ACEITARR ❤️</div>
+    </div>
+      
+    <script>
+     const simButton = document.getElementById('sim');
+        const naoButton = document.getElementById('nao');
+        const mensagem = document.getElementById('mensagem');
+
+        simButton.addEventListener('click', () => {
+        naoButton.disabled = false;
+        mensagem.style.display = 'block';
+        });
+
+        naoButton.addEventListener('click', () => {
+        naoButton.style.position = 'absolute';
+        naoButton.style.left = `${Math.random() * window.innerWidth}px`;
+        naoButton.style.top = `${Math.random() * window.innerHeight}px`;
+        });
+    </script>
+  </body>
+</html>
